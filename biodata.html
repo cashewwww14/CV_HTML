@@ -11,7 +11,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            font-family: 'Poppins', Arial, sans-serif; /* Font modern */
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -21,28 +21,41 @@
             align-items: center;
             height: 100vh;
         }
+
         .container {
             width: 80%;
             max-width: 800px;
-            background-color: rgba(253, 238, 223, 0.9); /* Warna dengan opacity */
+            background-color: rgba(253, 238, 223, 0.9);
             padding: 30px;
             border-radius: 15px;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
         }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         h2 {
             color: #e09963;
-            font-size: 2.5rem; /* Judul lebih besar */
+            font-size: 2.5rem;
             margin-bottom: 10px;
             font-weight: bold;
         }
+        
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
         table, th, td {
-            border: 5px solid #e09963; /* Kurangi ketebalan border */
+            border: 5px solid #e09963;
         }
         th, td {
             padding: 10px;
@@ -57,6 +70,7 @@
             background-color: #f3e3d7;
             color: #333;
         }
+        
         .links {
             display: flex;
             justify-content: space-between; 
@@ -115,11 +129,15 @@
                 <td>Indonesian</td>
             </tr>
             <tr>
-                <th>Occupation</th> <!-- Mengganti "Job" ke "Occupation" agar lebih formal -->
+                <th>Occupation</th>
                 <td>Student</td>
             </tr>
             <tr>
-                <th>Address</th> <!-- Mengganti "Recent Address" ke "Address" agar lebih umum -->
+                <th>Email</th>
+                <td>zaky.shidqi14@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Address</th>
                 <td>Jl. Marina Emas Barat 6 No.20, Keputih, Kec. Sukolilo, Surabaya, Jawa Timur 60111</td>
             </tr>
         </table>
@@ -127,7 +145,7 @@
         <div class="links">
             <a class="home-button" href="index.html">Home</a>
             <div>
-                <a href="education.html">Education</a> <!-- Mengubah teks link menjadi lebih ringkas -->
+                <a href="education.html">Education</a>
                 <a href="geninf.html">General Information</a>
             </div>
         </div>
