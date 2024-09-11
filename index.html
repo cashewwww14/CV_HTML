@@ -11,7 +11,7 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
-            font-family: 'Poppins', Arial, sans-serif; /* Font modern */
+            font-family: 'Poppins', Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
@@ -20,16 +20,27 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .container {
             width: 80%;
             max-width: 900px;
-            background-color: rgba(253, 238, 223, 0.9); /* Transparansi lembut */
+            background-color: rgba(253, 238, 223, 0.9);
             border-radius: 25px;
             padding: 30px;
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
             text-align: left;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .profile {
@@ -42,9 +53,9 @@
         .profile img {
             width: 180px;
             height: 180px;
-            border-radius: 50%; /* Bikin gambar profil bulat */
+            border-radius: 50%;
             margin-right: 30px;
-            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Bayangan gambar */
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
         }
 
         .profile h2 {
@@ -79,7 +90,7 @@
 
         .links a:hover {
             background-color: #b4692f;
-            transform: translateY(-5px); /* Efek hover angkat */
+            transform: translateY(-5px);
         }
     </style>
 </head>
