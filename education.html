@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
 
         .container {
@@ -31,6 +32,16 @@
             box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
             text-align: center;
             position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         h2 {
@@ -72,14 +83,14 @@
             width: 80px;
             height: auto;
             position: absolute;
-            top: -40px; /* Posisi gambar di atas kotak */
+            top: -40px;
             left: 50%;
             transform: translateX(-50%);
             transition: transform 0.3s ease;
         }
 
         .box:hover img {
-            transform: translateX(-50%) translateY(-10px); /* Naik bersama kotak */
+            transform: translateX(-50%) translateY(-10px);
         }
 
         .box p {
@@ -137,31 +148,31 @@
         <h2>Education History</h2>
         <div class="education-timeline">
             <div class="box">
-                <img style="top: -40%;" src="alazhar.png" alt="SDIT Al Azhar Syifa Budi Legenda"> <!-- Logo SDIT -->
+                <img src="alazhar.png" alt="SDIT Al Azhar Syifa Budi Legenda">
                 <p><strong>SDIT Al Azhar Syifa Budi Legenda</strong></p>
                 <p>2012 - 2017</p>
             </div>
             <img src="arrow.png" alt="Arrow" class="arrow">
             <div class="box">
-                <img src="dqm.png" alt="Pesantren Terpadu Darul Quran Mulia"> <!-- Logo Pesantren -->
+                <img src="dqm.png" alt="Pesantren Terpadu Darul Quran Mulia">
                 <p><strong>Pesantren Terpadu Darul Quran Mulia</strong></p>
                 <p>2017</p>
             </div>
             <img src="arrow.png" alt="Arrow" class="arrow">
             <div class="box">
-                <img src="nfbs.png" alt="SMPIT Nurul Fikri"> <!-- Logo SMPIT -->
+                <img src="nfbs.png" alt="SMPIT Nurul Fikri">
                 <p><strong>SMPIT Nurul Fikri Boarding School Bogor</strong></p>
                 <p>2018 - 2020</p>
             </div>
             <img src="arrow.png" alt="Arrow" class="arrow">
             <div class="box">
-                <img src="albayan.png" alt="SMAPU Al-Bayan"> <!-- Logo SMAPU -->
+                <img src="albayan.png" alt="SMAPU Al-Bayan">
                 <p><strong>SMAPU Al-Bayan Cibadak</strong></p>
                 <p>2020 - 2023</p>
             </div>
             <img src="arrow.png" alt="Arrow" class="arrow">
             <div class="box" style="width: 350px;">
-                <img style="top: -40%;" src="its.png" alt="Institut Teknologi Sepuluh Nopember"> <!-- Logo ITS -->
+                <img src="its.png" alt="Institut Teknologi Sepuluh Nopember">
                 <p style="line-height: 1.2;"><strong>Institut Teknologi Sepuluh Nopember</strong></p>
                 <p style="line-height: 1.2;">Informatics Engineering</p>
                 <p>2023 - now</p>
